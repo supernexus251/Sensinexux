@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sensinexux</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0d0d0d;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.caja{
+background:#1b1b1b;
+padding:20px;
+border-radius:15px;
+width:90%;
+max-width:400px;
+text-align:center;
+box-shadow:0 0 20px red;
+}
+
+input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+margin-top:10px;
+}
+
+button{
+margin-top:15px;
+width:100%;
+padding:12px;
+background:red;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+#resultado{
+margin-top:20px;
+font-size:18px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="caja">
+<h1>🔥 Sensinexux 🔥</h1>
+
+<input type="text" id="modelo" placeholder="Escribe tu celular">
+
+<button onclick="generar()">Generar Sensibilidad</button>
+
+<div id="resultado"></div>
+
+</div>
+
+<script>
+function generar(){
+
+let general=Math.floor(Math.random()*20)+180;
+let rojo=Math.floor(Math.random()*20)+180;
+let mira2=Math.floor(Math.random()*20)+170;
+let mira4=Math.floor(Math.random()*20)+160;
+let awm=Math.floor(Math.random()*20)+40;
+let dpi=Math.floor(Math.random()*200)+400;
+
+document.getElementById("resultado").innerHTML=
+`
+General: ${general}<br>
+Punto Rojo: ${rojo}<br>
+Mira 2X: ${mira2}<br>
+Mira 4X: ${mira4}<br>
+AWM: ${awm}<br>
+DPI: ${dpi}
+`;
+
+}
+</script>
+
+</body>
+  </html>
